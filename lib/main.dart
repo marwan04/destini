@@ -79,7 +79,6 @@ class _StoryPageState extends State<StoryPage> {
                   },
                   style: TextButton.styleFrom(backgroundColor: Colors.blue,),
                   child: Text(
-                    //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
                     storyBrain.getChoice2(),
                     style:const TextStyle(
                       color: Colors.white,
