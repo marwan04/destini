@@ -30,7 +30,24 @@ class StoryBrain {
          '')
   ];
   void nextStory(int num) {
-    _storyNumber = num;
+    if (_storyNumber == 0 && num == 1) {
+      _storyNumber = 2;
+    }
+    else if (_storyNumber == 0 && num == 2) {
+      _storyNumber = 1;
+    }
+    else if (_storyNumber == 1 && num == 1) {
+      _storyNumber = 2;
+    }
+    else if (_storyNumber == 1 && num == 2) {
+      _storyNumber = 3;
+    }
+    else if (_storyNumber == 2 && num == 1) {
+      _storyNumber = 5;
+    }
+    else if (_storyNumber == 2 && num == 2) {
+      _storyNumber = 4;
+    }
   }
 
 
@@ -50,8 +67,6 @@ class StoryBrain {
 //TODO: Step 23 - Use the storyNumber property inside getStory(), getChoice1() and getChoice2() so that it gets the updated story and choices rather than always just the first (0th) one.
 
 //TODO: Step 25 - Change the storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
-
-//TODO: Step 20 - Download the story plan here: https://drive.google.com/uc?export=download&id=1KU6EghkO9Hf2hRM0756xFHgNaZyGCou3
 
 //TODO: Step 21 - Using the story plan, update nextStory() to change the storyNumber depending on the choice made by the user. e.g. if choiceNumber was equal to 1 and the storyNumber is 0, the storyNumber should become 2.
 
